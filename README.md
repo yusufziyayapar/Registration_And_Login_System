@@ -11,7 +11,7 @@ First of all, its usage is as follows:
 Our username is created automatically, to explain briefly, it assigns the word up to the '@' sign of the email we enter as username.
 
 
-- When the recording process is finished, the program terminates with exit code 0.
+-When the recording process is finished, the program terminates with exit code 0.
 
 
 -If the recording process is finished, if it sends you to the menu, the file where your information is stored would not have been created and the program must be terminated for it to be created.
@@ -44,7 +44,7 @@ If your username is correct and your password is wrong, it warns that your passw
 -Programı açınca direkt olarak giriş yapamıyoruz çünkü öncelikle kayıt olmamız lazım.
 
 
- -Kayıt olduktan sonra program bize kullanıcı adımızı veriyor. 
+-Kayıt olduktan sonra program bize kullanıcı adımızı veriyor. 
 Kullanıcı adımız otomatik oluşuyor kısaca açıklamak gerekirse girdiğimiz emailin '@' işaretine kadar olan kelimeyi username olarak atıyor.
 
 
@@ -59,7 +59,7 @@ Kayıt  işlemi biter bitmez sizi menuye atsaydı bilgilerinizin saklandığı d
 Kullanıcı adınız doğru şifreniz yanlış ise şifreniz yanlıştır diye uyarı veriyor ve sizi menuye geriye atıyor.
 
 
-- Kullanıcı adınız ve şifrenizden hangisinin yanlış olduğunu tespit ediyor her türlü seçenekte sizi menuye geri atıyor örnek olarak şifreniz doğru ama kullanıcı adınız hatalı size bu bilgiyi vererek menuye geri atıyor. Eğer iki bilginizde sistemde kayıtlı bulunamıyorsa kullanıcı bulunamadı uyarısı verir ve sizi  yine menuye  atar.
+-Kullanıcı adınız ve şifrenizden hangisinin yanlış olduğunu tespit ediyor her türlü seçenekte sizi menuye geri atıyor örnek olarak şifreniz doğru ama kullanıcı adınız hatalı size bu bilgiyi vererek menuye geri atıyor. Eğer iki bilginizde sistemde kayıtlı bulunamıyorsa kullanıcı bulunamadı uyarısı verir ve sizi  yine menuye  atar.
 
 
 -Bir kere kayıt olduğunuzda save dosyası oluşur ve program çalışır. 
@@ -68,4 +68,4 @@ Kullanıcı adınız doğru şifreniz yanlış ise şifreniz yanlıştır diye u
 -Delete all accounts seçeneğine basarsanız oluşturulan kayıt bilgilerinin olduğu dosya silinir hesabınızı silmek için onu kullanabilirsiniz. Eğer bu işlemden sonra programı çalıştırıp giriş seçeneğini seçerseniz giriş yapma ekranı gelmeyecektir çünkü  giriş seçeneği sadece program kayıt dosyasını yani "save1.txt" dosyasını bulabildiği zaman aktif etmektedir. Kısacası ya kayıt olursanız dosya oluşur giriş ekranı aktifleşir.
 
 
-- "save1.txt" dosyasına girdiğinizde saçma semboller görebilirsiniz. fwrite() işlevi tüm bilgileri "binary" olarak yazar, bu nedenle okuyamazsınız, kısacası bilgisayar kendi dilinde yazar.
+-"save1.txt" dosyasına girdiğinizde saçma semboller görebilirsiniz. fwrite() işlevi tüm bilgileri "binary" olarak yazar, bu nedenle okuyamazsınız, kısacası bilgisayar kendi dilinde yazar.
