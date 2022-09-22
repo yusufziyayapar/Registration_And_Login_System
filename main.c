@@ -20,7 +20,7 @@ void UsernameGenerator(char email[50],char username[50]){
 int main() {
      FILE *save1;
     struct user user1;
-    int choice,usrFound;
+    int choice;
     jump:
     printf("\n\t\t\t\t<------- Welcome to the Authentication System  ------->");
     printf("\n\nPlease choose your operation\n\n");
@@ -78,23 +78,27 @@ int main() {
                 if (save1 == 0) { printf("log file not found !"); break;}
 
                 while (fread(&usr, sizeof(struct user), 1, save1)) {
-                    if (strcmp(usr.username, username) == 0) {
-                        if (strcmp(usr.password, pword) == 0) {
+                    if (strcmp(usr.username, username) == 0 && strcmp(usr.password, pword) == 0)
+                    {
                             system("clear");
                             printf("\n\tWelcome %s", usr.username);
                             printf("\n\n|Full Name:\t%s", usr.name);
                             printf("\n|Email:\t\t%s", usr.email);
                             printf("\n|Username:\t%s", usr.username);
                             printf("\n|Contact no:\t%d", usr.phone);
-                        } else {
+                        } else if (strcmp(usr.username, username) == 0 && strcmp(usr.password, pword) != 0)
+                        {
                             printf("\n\nInvalid Password! Try again ");
                             goto jump;
-                        }
-                        usrFound = 1;
+                        } else if (strcmp(usr.username, username) != 0 && strcmp(usr.password, pword) == 0 )
+                        {
+                        printf("\n\nInvalid Username! Try again ");
+                        goto jump;
+                    }else if (strcmp(usr.username, username) != 0 && strcmp(usr.password, pword) != 0)
+                    {
+                        printf("User not found ! ");
+                        goto jump;
                     }
-                }
-                if (usrFound == 0) {
-                    printf("\n\nUser is not registered!");
                 }
                 fclose(save1);
             break;
